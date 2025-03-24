@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+service ocr2txt {
+  
+  rpc predict(predict_req) returns (predict_resp) {} 
+
+  
+}
+message predict_req { 
+string input1 = 1;string fileName2 = 2;bytes fileBytes2 = 3;
+}
+
+message predict_resp { 
+string output1 = 1;
+}
+
