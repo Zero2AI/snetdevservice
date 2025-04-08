@@ -41,7 +41,7 @@ class simplechatbot(simplechatbot_pb2_grpc.simplechatbotServicer):
             payload = {"message": input1}
             logging.info(f"Sending request with payload: {json.dumps(payload)}")
             response = await client.post(
-                "http://52.204.24.135:9128/predict",
+                "https://simplechatbot1.zero2ai.net/predict",
                 json=payload
             )
             response.raise_for_status()
